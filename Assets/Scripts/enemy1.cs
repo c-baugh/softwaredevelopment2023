@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class enemy1 : MonoBehaviour
 {
+    //tutorial - www.youtube.com/watch?v=xkz0veVavrM&list=PLbsvRhEyGkKcV2lZDqIScL7_fVfRGA1xF&index=2&ab_channel=Mr.Kaiser
+    
+    //init variables
     Rigidbody2D rb;
     //Animator anim;
+    
+    //movement variables
+    public Transform target;
+    public float movSpd = 1;
 
     public int health       //sets the enemy's health to 3 hp
     {
         get;
         set;
-    } = 3;
+    } = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,30 +28,22 @@ public class enemy1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (collision.gameObject.tag == Weapon)       //temp code for damage and knockback
+        /*if (collision.gameObject.tag == Player)
         {
-            if (rightHit)
-            {
-                rb.AddForce(Vector2.left * 5000, ForceMode2D.Force);
-            }
-            if (leftHit)
-            {
-                rb.AddForce(Vector2.right * 5000, ForceMode2D.Force);
-            }
-            if (topHit)
-            {
-                rb.AddForce(Vector2.down * 5000, ForceMode2D.Force);
-            }
-            if (bottomHit)
-            {
-                rb.AddForce(Vector2.up * 5000, ForceMode2D.Force);
-            }
-            health--;
+            knockback(target);
+        }
+        if (collision.gameObject.tag == Weapon)       //temp code for damage and knockback
+        {
+            knockback(transform)
         }*/
     }
+
     private void FixedUpdate()
     {
         //movement
+        transform.LookAt(target.position);
+        transform.Translate(new Vector3(movSpd * Time.deltaTime, 0, 0));
+        
 
         //move animation
         //if (hMove == 0)
@@ -71,5 +70,24 @@ public class enemy1 : MonoBehaviour
         }
     }
 
-    
+    public void knockback(Transform attacked)
+    {
+        /*if (rightHit)
+        {
+            attacked.AddForce(Vector2.left * 5000, ForceMode2D.Force);
+        }
+        if (leftHit)
+        {
+            attacked.AddForce(Vector2.right * 5000, ForceMode2D.Force);
+        }
+        if (topHit)
+        {
+            attacked.AddForce(Vector2.down * 5000, ForceMode2D.Force);
+        }
+        if (bottomHit)
+        {
+            attacked.AddForce(Vector2.up * 5000, ForceMode2D.Force);
+        }
+        health--;*/
+    }
 }
