@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemy1 : MonoBehaviour
@@ -11,7 +12,7 @@ public class enemy1 : MonoBehaviour
     //Animator anim;
     
     //movement variables
-    public Transform target;
+    public Transform target;            //variable for player to be targeted by the enemy
     public float movSpd = 1;
 
     public int health       //sets the enemy's health to 3 hp
@@ -23,18 +24,20 @@ public class enemy1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //generate weapon
+
+        //generate weapon (enemy might be generated with a player weapon
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        knockback(transform);           //temp code for demonstration purposes
         /*if (collision.gameObject.tag == Player)
         {
-            knockback(target);
+            knockback(target);          //knocks back the player if enemy moves into them
         }
         if (collision.gameObject.tag == Weapon)       //temp code for damage and knockback
         {
-            knockback(transform)
+            knockback(transform);       //knocks back the enemy when attacked
         }*/
     }
 
@@ -56,8 +59,8 @@ public class enemy1 : MonoBehaviour
             //anim.SetBool("vWalk",true)
 
 
-        //attack
-        //if (player is near)
+        //attack        //enemy uses weapon if they have one when player is in range
+        //if (player is near && holdWeapon == true)
             //useWeapon()
     }
     // Update is called once per frame
@@ -72,6 +75,7 @@ public class enemy1 : MonoBehaviour
 
     public void knockback(Transform attacked)
     {
+        rb.AddForce(Vector2.right * 5000, ForceMode2D.Force);           //temp code for demonstration purposes
         /*if (rightHit)
         {
             attacked.AddForce(Vector2.left * 5000, ForceMode2D.Force);
@@ -87,7 +91,7 @@ public class enemy1 : MonoBehaviour
         if (bottomHit)
         {
             attacked.AddForce(Vector2.up * 5000, ForceMode2D.Force);
-        }
-        health--;*/
+        }*/
+        health--;
     }
 }
