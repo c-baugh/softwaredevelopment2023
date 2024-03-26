@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (7)
+      value: SlotPanel (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -235,7 +235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (2)
+      value: SlotPanel (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -507,7 +507,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (1)
+      value: SlotPanel (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -905,7 +905,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (5)
+      value: SlotPanel (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1025,21 +1025,21 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1388236243}
+  - {fileID: 303497466}
   - {fileID: 4351372677985226984}
   - {fileID: 492558144}
-  - {fileID: 303497466}
-  - {fileID: 1388236243}
   - {fileID: 1992594562}
-  - {fileID: 930551427}
-  - {fileID: 429600323}
   - {fileID: 269916419}
-  - {fileID: 1954983580}
+  - {fileID: 429600323}
   - {fileID: 1536080283}
-  - {fileID: 1347103220}
-  - {fileID: 865791429}
+  - {fileID: 930551427}
+  - {fileID: 1954983580}
   - {fileID: 1681486812}
-  - {fileID: 1894736933}
+  - {fileID: 865791429}
   - {fileID: 2041790501}
+  - {fileID: 1347103220}
+  - {fileID: 1894736933}
   m_Father: {fileID: 1713785453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1057,7 +1057,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (10)
+      value: SlotPanel (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1159,7 +1159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (3)
+      value: SlotPanel
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1261,7 +1261,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (9)
+      value: SlotPanel (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1363,7 +1363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (12)
+      value: SlotPanel (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1676,7 +1676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (13)
+      value: SlotPanel (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -1778,7 +1778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (8)
+      value: SlotPanel (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -2005,9 +2005,12 @@ MonoBehaviour:
   itemToAdd: {fileID: 0}
   itemToRemove: {fileID: 0}
   items:
-  - {fileID: 11400000, guid: 02a53a768c1ab654b8c4992aa772977b, type: 2}
-  - {fileID: 11400000, guid: 174f895a4a42111468195f4606d5270a, type: 2}
-  - {fileID: 11400000, guid: e89435ab0c8bbe940b2545bca829dc5c, type: 2}
+  - item: {fileID: 11400000, guid: 02a53a768c1ab654b8c4992aa772977b, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: e89435ab0c8bbe940b2545bca829dc5c, type: 2}
+    quantity: 5
+  - item: {fileID: 11400000, guid: 174f895a4a42111468195f4606d5270a, type: 2}
+    quantity: 10
 --- !u!4 &2002011913
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2036,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (14)
+      value: SlotPanel (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
@@ -2135,7 +2138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3305057334924681748, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Name
-      value: SlotPanel
+      value: SlotPanel (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4560219223074175326, guid: 36f50d6696bb6af46af7b8cd66566369, type: 3}
       propertyPath: m_Pivot.x
