@@ -25,29 +25,23 @@ public class enemy1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        //generate weapon (enemy might be generated with a player weapon
+        //generate weapon (enemy might be generated with a player weapon)
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        knockback(transform);           //temp code for demonstration purposes
-        /*if (collision.gameObject.tag == Player)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            knockback(target);          //knocks back the player if enemy moves into them
+            
+            
+            knockback(collision);
         }
-        if (collision.gameObject.tag == Weapon)       //temp code for damage and knockback
-        {
-            knockback(transform);       //knocks back the enemy when attacked
-        }*/
     }
 
     private void FixedUpdate()
     {
-        //movement
         transform.LookAt(target.position);
-        transform.Translate(new Vector3(movSpd * Time.deltaTime, 0, 0));
-        
-
+        transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
         //move animation
         //if (hMove == 0)
             //anim.SetBool("hWalk",false)
@@ -65,33 +59,42 @@ public class enemy1 : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        if (health <= 0)
+    {   
+        //movement
+        transform.rotation = Quaternion.identity;       //keeps the sprite flat instead of rotating around
+        
+        /*if (health <= 0)
         {
             Destroy(gameObject);
             //drop weapon
-        }
+        }*/
     }
 
-    public void knockback(Transform attacked)
+    public void knockback(Collision2D collision)
     {
-        rb.AddForce(Vector2.right * 5000, ForceMode2D.Force);           //temp code for demonstration purposes
-        /*if (rightHit)
+        Vector3 contactPoint = collision.contacts[0].point;
+        Vector3 center = collision.collider.bounds.center;
+
+        bool rightHit = contactPoint.x > center.x;
+        bool leftHit = contactPoint.x < center.x;
+        bool topHit = contactPoint.y > center.y;
+        bool bottomHit = contactPoint.y < center.y;
+
+        if (rightHit)
         {
-            attacked.AddForce(Vector2.left * 5000, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * 5, ForceMode2D.Force);
         }
         if (leftHit)
         {
-            attacked.AddForce(Vector2.right * 5000, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * 5, ForceMode2D.Force);
         }
         if (topHit)
         {
-            attacked.AddForce(Vector2.down * 5000, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.down * 5, ForceMode2D.Force);
         }
         if (bottomHit)
         {
-            attacked.AddForce(Vector2.up * 5000, ForceMode2D.Force);
-        }*/
-        health--;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 5, ForceMode2D.Force);
+        }
     }
 }
