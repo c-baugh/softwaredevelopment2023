@@ -24,8 +24,10 @@ public class SlotClass
 
     public SlotClass(SlotClass  slot)
     {
-        this.item = null;
-        this.quantity = 0;
+        
+      this.item = slot.GetItem();
+      this.quantity = slot.GetQuantity();
+        
     }
     
     public void Clear()

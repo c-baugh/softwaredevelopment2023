@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private GameObject itemCursor;
     [SerializeField] private GameObject slotHolder;
     [SerializeField] private ItemClass itemToAdd;
     [SerializeField] private ItemClass itemToRemove;
@@ -23,7 +24,7 @@ public class Inventory : MonoBehaviour
     private SlotClass originalSlot;
 
     bool isMovingItem;
-    public void Start()
+    private void Start()
     {
         slots = new GameObject[slotHolder.transform.childCount];
         items = new SlotClass[slots.Length];
@@ -51,6 +52,11 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+        itemCursor.SetActive(isMovingItem);
+        itemCursor.transform.position = Input.mousePosition;
+        if (isMovingItem)
+            itemCursor.GetComponent<Image>().sprite = movingSlot.GetItem().itemIcon;
+
         if (Input.GetMouseButtonDown(0))  //we clicked! 
         {
             //find the closest slot (the slot we clicked on)
@@ -65,6 +71,7 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
     #region Inventory Utils
     public void RefreshUI()
     {
@@ -74,6 +81,7 @@ public class Inventory : MonoBehaviour
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].GetItem().itemIcon;
+
                 if (items[i].GetItem().isStackable)
                     slots[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = items[i].GetQuantity() + "";
                 else
@@ -192,23 +200,24 @@ public class Inventory : MonoBehaviour
             Add(movingSlot.GetItem(), movingSlot.GetQuantity());
             movingSlot.Clear();
         }
-        else
+        else 
+        if (originalSlot != null)
         {
             if (originalSlot.GetItem() != null)
             {
-                if (originalSlot.GetItem() == movingSlot.GetItem()) //they're the same item (they should stack)
+                if (originalSlot.GetItem() == movingSlot.GetItem())
                 {
-                    if (originalSlot.GetItem().isStackable)
+                    if (originalSlot.GetItem().isStackable) // Handle stacking logic
                     {
                         originalSlot.AddQuantity(movingSlot.GetQuantity());
                         movingSlot.Clear();
                     }
                     else
                         return false;
-
                 }
                 else
                 {
+                    //handles swapping logic.
                     tempSlot = new SlotClass(originalSlot); //a = b
                     originalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity()); //b = c 
                     movingSlot.AddItem(tempSlot.GetItem(), tempSlot.GetQuantity()); //a = c
@@ -216,18 +225,26 @@ public class Inventory : MonoBehaviour
                     return true;
                 }
             }
-            else //place item as usual.
+            else // Place item as usual
             {
                 originalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity());
                 movingSlot.Clear();
-
             }
+        }
+        else
+        {
+            // Handle case where mouse is not over any slot
+            // Return item to its original position or handle it differently
+            Debug.Log("Mouse is not over any slot.");
+            // For now, let's just clear the movingSlot
+            movingSlot.Clear();
         }
 
         isMovingItem = false;
         RefreshUI();
         return true;
     }
+
     private SlotClass GetClosestSlot()
     {
 
@@ -239,10 +256,7 @@ public class Inventory : MonoBehaviour
         }
 
         return null;
-
-    }
-
-
+    }   
     #endregion
 }
 
