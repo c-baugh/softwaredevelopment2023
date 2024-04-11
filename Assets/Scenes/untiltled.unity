@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6226415, g: 0.13275747, b: 0.11454255, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2077,6 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1563b1cf9e6b7fd4e8a56269f2ccff70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCursor: {fileID: 1465905371}
   slotHolder: {fileID: 1332291721}
   itemToAdd: {fileID: 11400000, guid: 02a53a768c1ab654b8c4992aa772977b, type: 2}
   itemToRemove: {fileID: 11400000, guid: e89435ab0c8bbe940b2545bca829dc5c, type: 2}
