@@ -9,11 +9,12 @@ public class enemy1 : MonoBehaviour
     
     //init variables
     Rigidbody2D rb;
-    //Animator anim;
+    Animator anim;
     
     //movement variables
     public Transform target;            //variable for player to be targeted by the enemy
     public float movSpd = 1;
+    bool faceRight = true;
 
     public int health       //sets the enemy's health to 3 hp
     {
@@ -24,38 +25,47 @@ public class enemy1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
         //generate weapon (enemy might be generated with a player weapon)
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Attack"))
         {
-            
-            
             knockback(collision);
         }
-    }
+    }*/
 
     private void FixedUpdate()
     {
         transform.LookAt(target.position);
         transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+
+        float hMove = Input.GetAxis("Horizontal");
         //move animation
-        //if (hMove == 0)
-            //anim.SetBool("hWalk",false)
+        if (hMove < 0 && faceRight)
+        {
+            rb.transform.Rotate(0f, 180f, 0, Space.Self);
+            faceRight = false;
+        }
+        if(hMove > 0 && !faceRight)
+        {
+            rb.transform.Rotate(0f, 180f, 0, Space.Self);
+            faceRight = true;
+        }
+
         //else
-            //anim.SetBool("hWalk",true)
+        //anim.SetBool("hWalk",true)
         //if (vMove == 0)
-            //anim.SetBool("vWalk",false)
+        //anim.SetBool("vWalk",false)
         //else
-            //anim.SetBool("vWalk",true)
+        //anim.SetBool("vWalk",true)
 
 
         //attack        //enemy uses weapon if they have one when player is in range
         //if (player is near && holdWeapon == true)
-            //useWeapon()
+        //useWeapon()
     }
     // Update is called once per frame
     void Update()
@@ -70,7 +80,7 @@ public class enemy1 : MonoBehaviour
         }*/
     }
 
-    public void knockback(Collision2D collision)
+    /*public void knockback(Collision2D collision)
     {
         Vector3 contactPoint = collision.contacts[0].point;
         Vector3 center = collision.collider.bounds.center;
@@ -96,5 +106,5 @@ public class enemy1 : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 5, ForceMode2D.Force);
         }
-    }
+    }*/
 }
