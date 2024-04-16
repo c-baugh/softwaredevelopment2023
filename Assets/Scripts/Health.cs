@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] int health = 100;
+    public Image healthBar;
+    public bool player = false;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,11 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player)
+        {
+            healthBar.fillAmount = health / 100f;
+        }
+
         if(health <= 0)
         {
             Die();
@@ -47,4 +55,8 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public int GetHealth()
+    {
+        return health;
+    }
 }
