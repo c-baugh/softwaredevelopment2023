@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
 {
     private Camera mainCam;
     private Vector3 mousePos;
+
     public GameObject bullet;
     public Transform bulletTransform;
     public bool canFire;
@@ -17,7 +18,6 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //mainCam = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<Camera>();
         mainCam = GameObject.FindObjectOfType<Camera>();
     }
 
