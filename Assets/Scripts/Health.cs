@@ -55,8 +55,20 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public int GetHealth()
+    public void UseHealing()
     {
-        return health;
+        StartCoroutine("MyCoroutineHealing");
+    }
+
+    IEnumerator MyCoroutineHealing()
+    {
+        for (int i = 0; i < 15; i++)
+        {
+            if (health < 100)
+            {
+                yield return new WaitForSeconds(.1f);
+                health += 1;
+            }
+        }
     }
 }
