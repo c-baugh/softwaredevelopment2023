@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    public KeyCode keybind;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Alpha1) && canFire) 
+        if(Input.GetKeyDown(keybind) && canFire) 
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
