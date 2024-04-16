@@ -35,16 +35,6 @@ public class Fireball : MonoBehaviour
     void Update()
     {
 
-        if (onFire)
-        {
-            for(int i = 0;i < 5; i++)
-            {
-                health.Damage(damage);
-            }
-            onFire = false;
-            //Destroy(part);
-        }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -52,13 +42,34 @@ public class Fireball : MonoBehaviour
         if (collider.GetComponent<Health>() != null)
         {
             part = Instantiate(particles,collider.transform);
-            onFire = true;
+            //onFire = true;
 
             health = collider.GetComponent<Health>();
             health.Damage(damage);
 
+            StartCoroutine("MyCoroutine");
+
 
         }
+    }
+
+    IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        health.Damage(damage);
+
+        yield return new WaitForSeconds(1f);
+        health.Damage(damage);
+
+        yield return new WaitForSeconds(1f);
+        health.Damage(damage);
+
+        yield return new WaitForSeconds(1f);
+        health.Damage(damage);
+
+        yield return new WaitForSeconds(1f);
+        health.Damage(damage);
+        Destroy(part);
     }
 }
 
