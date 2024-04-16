@@ -10,9 +10,6 @@ public class Fireball : MonoBehaviour
     public float force;
     private int damage = 2;
 
-    public bool onFire = false;
-    private float timer;
-    public float timeBetween = 5;
     Health health;
 
     public GameObject particles;
@@ -42,7 +39,6 @@ public class Fireball : MonoBehaviour
         if (collider.GetComponent<Health>() != null)
         {
             part = Instantiate(particles,collider.transform);
-            //onFire = true;
 
             health = collider.GetComponent<Health>();
             health.Damage(damage);
