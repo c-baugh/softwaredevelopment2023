@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class enemy1 : MonoBehaviour
+public class boss : MonoBehaviour
 {
-    //tutorial - www.youtube.com/watch?v=xkz0veVavrM&list=PLbsvRhEyGkKcV2lZDqIScL7_fVfRGA1xF&index=2&ab_channel=Mr.Kaiser
-    
     //init variables
     Rigidbody2D rb;
     Animator anim;
-    
+
     //movement variables
     public Transform target;            //variable for player to be targeted by the enemy
     public float movSpd = 1;
@@ -49,7 +46,7 @@ public class enemy1 : MonoBehaviour
             rb.transform.Rotate(0f, 180f, 0, Space.Self);
             faceRight = false;
         }
-        if(hMove > 0 && !faceRight)
+        if (hMove > 0 && !faceRight)
         {
             rb.transform.Rotate(0f, 180f, 0, Space.Self);
             faceRight = true;
@@ -69,10 +66,10 @@ public class enemy1 : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {   
+    {
         //movement
         transform.rotation = Quaternion.identity;       //keeps the sprite flat instead of rotating around
-        
+
         /*if (health <= 0)
         {
             Destroy(gameObject);
@@ -107,4 +104,6 @@ public class enemy1 : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 5, ForceMode2D.Force);
         }
     }*/
+}
+
 }
