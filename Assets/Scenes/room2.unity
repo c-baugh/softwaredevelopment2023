@@ -2217,6 +2217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 15
+  healthBar: {fileID: 0}
+  player: 0
 --- !u!212 &676315788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2609,32 +2611,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &777375434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3397172521773169827, guid: d59600c6fe506104383a2abd336e1337, type: 3}
-  m_PrefabInstance: {fileID: 4398015950766260503}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &777375441
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777375434}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68a3346128ec7a44aa7c512a2a5d417b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &951993944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 15
+  healthBar: {fileID: 0}
+  player: 0
 --- !u!212 &951993946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7278,6 +7256,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 319088508925166820, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 2117982485}
     - target: {fileID: 3246220533927412735, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.31
@@ -7321,10 +7303,6 @@ PrefabInstance:
     - target: {fileID: 4272302040899621490, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272302040899621490, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7428,7 +7406,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3246220533927412735, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
   m_PrefabInstance: {fileID: 1552492124}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4398015950766260503
+--- !u!1 &2117982485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7402488577607948275, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
+  m_PrefabInstance: {fileID: 1552492124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5060588800351150109
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -7484,21 +7467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4094537599636967677, guid: d59600c6fe506104383a2abd336e1337, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -564733631, guid: 9386cecaa4c581448ac48cf092ed8807, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3397172521773169827, guid: d59600c6fe506104383a2abd336e1337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 777375441}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59600c6fe506104383a2abd336e1337, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -7507,6 +7479,6 @@ SceneRoots:
   - {fileID: 1969065687}
   - {fileID: 472708106}
   - {fileID: 1552492124}
-  - {fileID: 4398015950766260503}
+  - {fileID: 5060588800351150109}
   - {fileID: 951993947}
   - {fileID: 676315789}
