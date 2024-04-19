@@ -36,9 +36,29 @@ public class boss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.LookAt(target.position);
-        transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+        if (target.position.y > transform.position.y)
+        {
+            if (target.position.x > transform.position.x)
+            {
+                transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+            }
+            else
+            {
+                transform.Translate(new Vector3(-movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+            }
 
+        }
+        else
+        {
+            if (target.position.x > transform.position.x)
+            {
+                transform.Translate(new Vector3(movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+            }
+            else
+            {
+                transform.Translate(new Vector3(-movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+            }
+        }
         float hMove = Input.GetAxis("Horizontal");
         //move animation
         if (hMove < 0 && faceRight)

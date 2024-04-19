@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.identity;
         spdX = Input.GetAxisRaw("Horizontal") * activeMoveSpd;
         spdY = Input.GetAxisRaw("Vertical") * activeMoveSpd;
         rb.velocity = new Vector2(spdX, spdY);

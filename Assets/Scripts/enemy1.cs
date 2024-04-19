@@ -14,7 +14,7 @@ public class enemy1 : MonoBehaviour
     //movement variables
     public Transform target;            //variable for player to be targeted by the enemy
     public float movSpd = 1;
-    bool faceRight = true;
+    //bool faceRight = true;
 
     public int health       //sets the enemy's health to 3 hp
     {
@@ -39,24 +39,35 @@ public class enemy1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.LookAt(target.position);
+        
         if(target.position.y > transform.position.y )
         {
             if(target.position.x > transform.position.x)
             {
                 transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
             }
+            else
+            {
+                transform.Translate(new Vector3(-movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+            }
 
         }
         else 
         {
-            transform.Translate(new Vector3(movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+            if (target.position.x > transform.position.x)
+            {
+                transform.Translate(new Vector3(movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+            }
+            else
+            {
+                transform.Translate(new Vector3(-movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+            }
         }
         
 
-        float hMove = Input.GetAxis("Horizontal");
+        /*float hMove = Input.GetAxis("Horizontal");
         //move animation
-        if (hMove < 0 && faceRight)
+        if(hMove < 0 && faceRight)
         {
             rb.transform.Rotate(0f, 180f, 0, Space.Self);
             faceRight = false;
@@ -65,7 +76,7 @@ public class enemy1 : MonoBehaviour
         {
             rb.transform.Rotate(0f, 180f, 0, Space.Self);
             faceRight = true;
-        }
+        }*/
 
         //else
         //anim.SetBool("hWalk",true)
