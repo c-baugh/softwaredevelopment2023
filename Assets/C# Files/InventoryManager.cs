@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-public class Inventory : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private GameObject itemCursor;
     [SerializeField] private GameObject slotHolder;
@@ -228,6 +229,12 @@ public class Inventory : MonoBehaviour
 
     }
 
+
+    public void UseSelected()
+    {
+        items[selectedSlotIndex + (hotbarSlots.Length * 3)].SubQuantity(1);
+        RefreshUI();
+    }
     public SlotClass Contains(ItemClass item)
     {
         for (int i = 0; i < items.Length; i++)
@@ -365,7 +372,10 @@ public class Inventory : MonoBehaviour
         }
 
         return null;
-    }   
+    }
+
+    
+
     #endregion
 }
 
