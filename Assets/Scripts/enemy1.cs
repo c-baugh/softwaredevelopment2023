@@ -14,7 +14,8 @@ public class enemy1 : MonoBehaviour
     //movement variables
     public Transform target;            //variable for player to be targeted by the enemy
     public float movSpd = 1;
-    //bool faceRight = true;
+    public bool faceRight = true;
+    private SpriteRenderer spriteRenderer;
 
     public int health       //sets the enemy's health to 3 hp
     {
@@ -26,6 +27,7 @@ public class enemy1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         //generate weapon (enemy might be generated with a player weapon)
     }
 
@@ -45,10 +47,14 @@ public class enemy1 : MonoBehaviour
             if(target.position.x > transform.position.x)
             {
                 transform.Translate(new Vector3(movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+                spriteRenderer.flipX = false;
+
             }
             else
             {
                 transform.Translate(new Vector3(-movSpd * Time.deltaTime, movSpd * Time.deltaTime, 0));
+                spriteRenderer.flipX = true;
+
             }
 
         }
@@ -57,15 +63,19 @@ public class enemy1 : MonoBehaviour
             if (target.position.x > transform.position.x)
             {
                 transform.Translate(new Vector3(movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+                spriteRenderer.flipX = false;
+
             }
             else
             {
                 transform.Translate(new Vector3(-movSpd * Time.deltaTime, -movSpd * Time.deltaTime, 0));
+                spriteRenderer.flipX = true;
+
             }
         }
         
 
-        /*float hMove = Input.GetAxis("Horizontal");
+       /* float hMove = Input.GetAxis("Horizontal");
         //move animation
         if(hMove < 0 && faceRight)
         {
@@ -78,12 +88,7 @@ public class enemy1 : MonoBehaviour
             faceRight = true;
         }*/
 
-        //else
-        //anim.SetBool("hWalk",true)
-        //if (vMove == 0)
-        //anim.SetBool("vWalk",false)
-        //else
-        //anim.SetBool("vWalk",true)
+        
 
 
         //attack        //enemy uses weapon if they have one when player is in range

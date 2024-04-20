@@ -7350,6 +7350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5177514650912098906, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -7484,6 +7488,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5177514650912098906, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -7552,6 +7568,10 @@ PrefabInstance:
     - target: {fileID: 3397172521773169827, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177514650912098906, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_SortingLayer
@@ -7763,6 +7783,10 @@ PrefabInstance:
     - target: {fileID: 3397172521773169827, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177514650912098906, guid: d59600c6fe506104383a2abd336e1337, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6781630457884654460, guid: d59600c6fe506104383a2abd336e1337, type: 3}
       propertyPath: m_SortingLayer
