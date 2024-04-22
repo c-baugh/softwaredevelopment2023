@@ -75,18 +75,7 @@ public class enemy1 : MonoBehaviour
         }
         
 
-       /* float hMove = Input.GetAxis("Horizontal");
-        //move animation
-        if(hMove < 0 && faceRight)
-        {
-            rb.transform.Rotate(0f, 180f, 0, Space.Self);
-            faceRight = false;
-        }
-        if(hMove > 0 && !faceRight)
-        {
-            rb.transform.Rotate(0f, 180f, 0, Space.Self);
-            faceRight = true;
-        }*/
+       
 
         
 
