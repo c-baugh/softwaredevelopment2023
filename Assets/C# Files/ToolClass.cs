@@ -13,9 +13,14 @@ public class ToolClass : ItemClass
         hammer,
         axe
     }
-    public override  ItemClass GetItem() { return this; }
+
+    public override void Use(PlayerController Caller)
+    {
+        base.Use(Caller);
+        Debug.Log("Swing Tool");
+    }
+
     public override ToolClass GetTool() { return this; }
-    public override MiscClass GetMisc() { return null; } 
-    public override ConsumableClass GetConsumable() { return null; }
+    
 
 }
