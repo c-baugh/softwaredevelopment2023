@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public InventoryManager inventory;
-        
+
     // Update is called once per frame
     void Update()
     {
@@ -13,8 +12,7 @@ public class PlayerController : MonoBehaviour
         {
             //use the item 
             if (inventory.SelectedItem != null)
-            inventory.SelectedItem.Use(this);
-
+                inventory.SelectedItem.Use(this);
         }
     }
 }
