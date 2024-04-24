@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class AttackArea : MonoBehaviour
 {
+    Collider2D col;
     private int damage = 5;
 
     ////private Camera mainCam;
