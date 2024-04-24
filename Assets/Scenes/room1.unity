@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
+  hotbarUI: {fileID: 0}
 --- !u!1001 &212700473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5229,6 +5230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 632404922}
+  hotbarUI: {fileID: 0}
 --- !u!61 &915769274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6013,7 +6015,15 @@ MonoBehaviour:
   itemToRemove: {fileID: 11400000, guid: e89435ab0c8bbe940b2545bca829dc5c, type: 2}
   startingItems:
   - item: {fileID: 11400000, guid: e89435ab0c8bbe940b2545bca829dc5c, type: 2}
+    quantity: 3
+  - item: {fileID: 11400000, guid: 7c67a396c9eb61e408475d0b09d84171, type: 2}
+    quantity: 3
+  - item: {fileID: 11400000, guid: 1c91a1764aefbd94f8ad84572dcd3eca, type: 2}
     quantity: 5
+  - item: {fileID: 11400000, guid: 02a53a768c1ab654b8c4992aa772977b, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 174f895a4a42111468195f4606d5270a, type: 2}
+    quantity: 4
   hotbarSelector: {fileID: 139508071}
   selectedSlotIndex: 0
   SelectedItem: {fileID: 0}
