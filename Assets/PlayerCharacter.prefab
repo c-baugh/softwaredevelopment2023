@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5921590770820536312}
   - component: {fileID: 3688256047335351591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 319088508925166820}
   - component: {fileID: 9077090854076963677}
   - component: {fileID: 8421373531192283145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1550017420637346815}
   - component: {fileID: 660792259219934998}
   - component: {fileID: 758193942913079699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackArea
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 201069450514474730}
   - component: {fileID: 4249314103387253818}
   - component: {fileID: 1716607934519101364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
