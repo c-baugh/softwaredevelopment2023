@@ -27,12 +27,11 @@ public class Health : MonoBehaviour
 
         if(health <= 0)
         {
-
-            deathMessage.SetActive(true);
+            if (player)
+            {
+                deathMessage.SetActive(true);
+            }
             Die();
-
-
-            
         }
     }
 

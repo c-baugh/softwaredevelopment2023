@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8404684035297870902
+--- !u!1 &2468176081260639155
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5594867811932580449}
-  - component: {fileID: 2356028770495302075}
-  - component: {fileID: 4347450966293049743}
-  - component: {fileID: 8287438993831561464}
-  - component: {fileID: 2256534058663520069}
-  m_Layer: 9
-  m_Name: Fireball
+  - component: {fileID: 2133345596941163410}
+  - component: {fileID: 6880917114838759327}
+  - component: {fileID: 168157978668679129}
+  - component: {fileID: 6345870714146404632}
+  - component: {fileID: 4785669990294502755}
+  m_Layer: 7
+  m_Name: EnemyFireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5594867811932580449
+--- !u!4 &2133345596941163410
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404684035297870902}
+  m_GameObject: {fileID: 2468176081260639155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.42, y: 3.87, z: 0.3541504}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2356028770495302075
+--- !u!212 &6880917114838759327
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404684035297870902}
+  m_GameObject: {fileID: 2468176081260639155}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4347450966293049743
+--- !u!114 &168157978668679129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404684035297870902}
+  m_GameObject: {fileID: 2468176081260639155}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b8ec166e417ac4b9dd1215e41056b3, type: 3}
@@ -101,14 +101,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 5
   particles: {fileID: 6095335856458988594, guid: fdb7751fdfc1f2940a8eaa4f9871fbc3, type: 3}
---- !u!50 &8287438993831561464
+--- !u!50 &6345870714146404632
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404684035297870902}
+  m_GameObject: {fileID: 2468176081260639155}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -128,13 +128,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &2256534058663520069
+--- !u!61 &4785669990294502755
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404684035297870902}
+  m_GameObject: {fileID: 2468176081260639155}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2118497072619160055}
   - component: {fileID: 6727344720069387000}
   - component: {fileID: 8057867202769210291}
+  - component: {fileID: 8910844293215114480}
   - component: {fileID: 8328529020848738220}
   - component: {fileID: 7548702573862430599}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -145,6 +146,24 @@ MonoBehaviour:
   target: {fileID: 0}
   movSpd: 1
   faceRight: 1
+--- !u!114 &8910844293215114480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819330357808209143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d518b52b1190a7349b980656f284a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2468176081260639155, guid: 5ac773899113195428acf1fceb5824a4, type: 3}
+  bulletTransform: {fileID: 7955765087288773715}
+  target: {fileID: 0}
+  canFire: 0
+  timeBetweenFiring: 3
+  keybind: 0
 --- !u!114 &8328529020848738220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthBar: {fileID: 0}
+  deathMessage: {fileID: 0}
   player: 0
 --- !u!212 &7548702573862430599
 SpriteRenderer:

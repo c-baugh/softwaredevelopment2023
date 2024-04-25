@@ -321,6 +321,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d4b23577f879884ca219dbb653a80cd, type: 3}
+--- !u!1 &20470227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1432190167952704216, guid: 4d4b23577f879884ca219dbb653a80cd, type: 3}
+  m_PrefabInstance: {fileID: 20470226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140235833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,6 +4628,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 878376117}
+    - target: {fileID: 9077090854076963677, guid: b22ec3f5da997d14aa79ac286957a6b4, type: 3}
+      propertyPath: deathMessage
+      value: 
+      objectReference: {fileID: 20470227}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
