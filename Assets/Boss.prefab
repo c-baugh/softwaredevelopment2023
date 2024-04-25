@@ -179,7 +179,9 @@ MonoBehaviour:
   health: 100
   healthBar: {fileID: 0}
   deathMessage: {fileID: 0}
+  winMessage: {fileID: 0}
   player: 0
+  boss: 1
 --- !u!212 &7548702573862430599
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float spdX, spdY;
     Rigidbody2D rb;
     Collider2D col;
+    SpriteRenderer sprite;
 
     private float activeMoveSpd;
     public float dashSpd;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
         activeMoveSpd = movSpd;
 
     }
@@ -84,6 +86,14 @@ public class PlayerMovement : MonoBehaviour
         spdX = Input.GetAxisRaw("Horizontal") * activeMoveSpd;
         spdY = Input.GetAxisRaw("Vertical") * activeMoveSpd;
         rb.velocity = new Vector2(spdX, spdY);
+        if(spdX < 0)
+        {
+            sprite.flipX = true;
+        }
+        if (spdX > 0)
+        {
+            sprite.flipX = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

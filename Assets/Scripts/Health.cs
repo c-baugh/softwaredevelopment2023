@@ -8,7 +8,9 @@ public class Health : MonoBehaviour
     [SerializeField] int health = 100;
     public Image healthBar;
     public GameObject deathMessage;
+    public GameObject winMessage;
     public bool player = false;
+    public bool boss = false;
 
 
     // Start is called before the first frame update
@@ -30,6 +32,10 @@ public class Health : MonoBehaviour
             if (player)
             {
                 deathMessage.SetActive(true);
+            }
+            if (boss)
+            {
+                winMessage.SetActive(true);
             }
             Die();
         }
