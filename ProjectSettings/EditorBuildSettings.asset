@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/room5.unity
     guid: 9481419dbc219484688a982178514b0e
+  - enabled: 1
+    path: Assets/Scenes/bossRoom.unity
+    guid: 430dc477e1743ae4ba12732840e1ae97
   m_configObjects: {}

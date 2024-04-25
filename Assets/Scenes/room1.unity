@@ -3818,6 +3818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 1
+  numRooms: 0
 --- !u!61 &901830404
 BoxCollider2D:
   m_ObjectHideFlags: 0
