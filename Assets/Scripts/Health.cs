@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int health = 100;
     public Image healthBar;
+    public GameObject deathMessage;
     public bool player = false;
 
 
@@ -26,7 +27,12 @@ public class Health : MonoBehaviour
 
         if(health <= 0)
         {
+
+            deathMessage.SetActive(true);
             Die();
+
+
+            
         }
     }
 
