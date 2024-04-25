@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2581278316355720167}
   - component: {fileID: 6781630457884654460}
   - component: {fileID: 4547999661662651319}
+  - component: {fileID: 2279752297599932666}
   - component: {fileID: 4094537599636967677}
   - component: {fileID: 2014240578713657232}
   - component: {fileID: 5177514650912098906}
@@ -104,6 +105,24 @@ MonoBehaviour:
   health: 15
   healthBar: {fileID: 0}
   player: 0
+--- !u!114 &2279752297599932666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397172521773169827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d518b52b1190a7349b980656f284a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2430674249332960640, guid: 3971eca7c3bfbef4f8f74dc969ca0b71, type: 3}
+  bulletTransform: {fileID: 2581278316355720167}
+  target: {fileID: 0}
+  canFire: 1
+  timeBetweenFiring: 2
+  keybind: 0
 --- !u!61 &4094537599636967677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   movSpd: 1
+  faceRight: 1
 --- !u!50 &5177514650912098906
 Rigidbody2D:
   serializedVersion: 4
